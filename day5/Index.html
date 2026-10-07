@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Directory</title>
+  <script src="users.js" defer></script>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 1rem; font-family: Arial, sans-serif; line-height: 1.6; background: #eef2f5; color: #222; }
+    main { max-width: 700px; margin: 1rem auto; padding: 1.25rem; background: #fff; border-radius: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); }
+    label { display: block; margin: 1rem 0 4px; font-weight: bold; }
+    input { width: 100%; padding: 10px; font: inherit; border: 1px solid #b0b8c0; border-radius: 6px; }
+    button { padding: 10px 16px; font: inherit; color: #fff; background: #0f766e; border: none; border-radius: 6px; cursor: pointer; }
+    button:hover { background: #0b5550; }
+    button:disabled { background: #8aa8a5; cursor: not-allowed; }
+    #status { color: #555; min-height: 1.5rem; }
+    #users-list { padding: 0; list-style: none; }
+    .user { margin-bottom: 12px; padding: 12px 14px; border: 1px solid #dde2e6; border-left: 6px solid #0f766e; border-radius: 8px; background: #fafafa; }
+    .user p { margin: 0; }
+    .user-name { font-weight: bold; font-size: 1.1rem; }
+    .message { color: #666; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>User Directory</h1>
+
+    <button id="load-users" type="button">Load users</button>
+
+    <label for="filter-input">Filter by name</label>
+    <input type="text" id="filter-input" name="filter-input" placeholder="Type a name...">
+
+    <p id="status" aria-live="polite"></p>
+    <ul id="users-list"></ul>
+  </main>
+</body>
+</html>
